@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "./static/css/main.ff2b44e1.css",
+    "main.js": "./static/js/main.6199a18b.js",
+    "static/media/MuscleMetricIcon.jpg": "./static/media/MuscleMetricIcon.79a6c7be3f6c561a06c9.jpg",
+    "static/media/gym.png": "./static/media/gym.6e701417c428e2fbc267.png",
+    "index.html": "./index.html",
+    "main.ff2b44e1.css.map": "./static/css/main.ff2b44e1.css.map",
+    "main.6199a18b.js.map": "./static/js/main.6199a18b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff2b44e1.css",
+    "static/js/main.6199a18b.js"
+  ]
+}
