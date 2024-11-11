@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, rgba(53, 52, 60, 1), rgba(75, 78, 87, 1));
+    color: white;
+    min-height: 100vh;
+}
+
+/* Header Section */
+header {
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    /* Ensures the image covers the area without stretching */
+}
+
+main.sign-up-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-container,
+.right-container {
+    width: 48%;
+    /* Allow some space between the two containers */
+    padding: 20px;
+    /* Padding inside the containers */
+    border-radius: 8px;
+    /* Optional: rounded corners */
+}
+
+/* Left Container (Information Section) */
+.left-container {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.left-container h1 {
+    font-size: 36px;
+}
+
+.left-container p {
+    line-height: 1.6;
+}
+
+.progress-container {
+    margin: 20px 0;
+    /* Margin above and below the progress bar */
+    width: 100%;
+    /* Full width of the parent */
+    height: 10px;
+    /* Height of the progress bar */
+    background-color: #eee;
+    /* Background color */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 100%;
+    /* Full height of the container */
+    background-color: #007BFF;
+    /* Color of the progress */
+    border-radius: 5px;
+    /* Rounded corners for progress bar */
+    transition: width 0.3s ease;
+    /* Smooth transition effect */
+}
+
+/* Right Container (Sign Up Form) */
+.right-container {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.right-container h2 {
+    font-size: 28px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 10px;
+    /* Spacing between label and input */
+}
+
+form input {
+    margin-bottom: 15px;
+    /* Space between inputs */
+    padding: 10px;
+    /* Padding inside input fields */
+    border-radius: 5px;
+    /* Rounded input fields */
+    border: 1px solid #ccc;
+    /* Border for input fields */
+}
+
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.height-weight-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    max-width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}

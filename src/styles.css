@@ -1,0 +1,603 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, rgba(53, 52, 60, 1), rgba(75, 78, 87, 1));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    color: #fff;
+}
+
+p {
+    color: #ffffff;
+}
+
+/* Header Section */
+header {
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+.buttons {
+    position: absolute;
+    top: 22px;
+    right: 25px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007BFF;
+    margin-left: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.login {
+    background-color: #007BFF;
+}
+
+.signup {
+    background-color: #28a745;
+}
+
+.signup:hover {
+    background-color: #218838;
+}
+
+.panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.panel.reverse {
+    flex-direction: row-reverse;
+}
+
+.panel-content {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.text-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-content {
+    flex: 1;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+footer {
+    padding: 20px;
+    background-color: transparent;
+    text-align: center;
+    position: relative;
+}
+
+.footer-logo {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.modal-title{
+    color: #000
+    ;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.close-button {
+    cursor: pointer;
+    font-size: 24px;
+    float: right;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Stack header content vertically */
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .buttons {
+        position: static;
+        /* Remove absolute positioning */
+        margin-top: 10px;
+        /* Add space above the buttons */
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* Stack panel content vertically */
+    .panel-content {
+        flex-direction: column;
+    }
+
+    /* Ensure image appears below the text */
+    .image-content {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Further reduce button size for smaller screens */
+    .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    /* Dark translucent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Ensure it's above other content */
+}
+
+/* Modal Container */
+.modal-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+/* Modal Title */
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Modal Form */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form Group Styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+    /* Adds spacing between the form fields */
+}
+
+/* Add padding between label and input */
+.form-group label {
+    margin-bottom: 5px;
+    /* Adds space between the label and input */
+}
+
+/* Input Styling */
+.modal-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.modal-form input:focus {
+    border-color: #007BFF;
+}
+
+.modal-form hr{
+    width: 100%;
+}
+
+/* Submit Button */
+.modal-submit-btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Sign Up Button */
+.signup-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #218838;
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover {
+    color: #0056b3;
+}
+
+/* Animation for Modal Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.left-container,
+.right-container {
+    width: 48%;
+    
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.left-container {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.left-container h2 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.left-container p {
+    line-height: 1.6;
+}
+
+.progress-container {
+    margin: 20px 0; 
+    width: 100%; 
+    height: 10px; 
+    background-color: #eee; 
+    border-radius: 5px; 
+    overflow: hidden; 
+}
+
+.progress-bar {
+    height: 100%; 
+    background: repeating-linear-gradient(
+        135deg, 
+        #007BFF, 
+        #007BFF 10%, 
+        #68bff1 10%, 
+        #68bff1 20% 
+    );
+    transition: width 0.3s ease; 
+    width: 0; 
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column; 
+    }
+
+    .left-container,
+    .right-container {
+        width: 100%; 
+        padding: 5px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .progress-container {
+        height: 8px; 
+    }
+
+    .progress-bar {
+        height: 100%; 
+    }
+}
+
+.right-container {
+    flex: 1; 
+    color: #fff;
+}
+
+.right-container h2 {
+    font-size: 28px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    
+}
+
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.height-weight-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.top-navigation {
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.top-navigation button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.top-navigation button:hover {
+    color: #007bff;
+}
+
+.active-tab {
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.content {
+    width: 100%;
+}
+
+
+
+/* Contact page styling */
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Header text styling for the contact form */
+.contact-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.contact-container p {
+    text-align: center;
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+/* Form field container */
+.contact-container form div {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+.contact-container label {
+    display: block;
+    font-size: 1rem;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Input field styling */
+.contact-container input[type="text"],
+.contact-container input[type="email"],
+.contact-container textarea {
+    width: 92%;
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus effect */
+.contact-container input[type="text"]:focus,
+.contact-container input[type="email"]:focus,
+.contact-container textarea:focus {
+    border-color: #007acc;
+    outline: none;
+}
+
+/* Text area styling */
+.contact-container textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit button styling */
+.contact-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007acc;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-container button[type="submit"]:hover {
+    background-color: #005fa3;
+}
+
+.submission-status {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #007acc;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-container h2 {
+        font-size: 1.5rem;
+    }
+}
