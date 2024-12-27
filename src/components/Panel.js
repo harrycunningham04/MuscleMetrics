@@ -10,14 +10,14 @@ const Panel = ({ title, description, imgSrc, reverse }) => {
               <h2>{title}</h2>
               <p>{description}</p>
             </div>
-            <div className="image-content">
+            <div className="image-content fade-in">
               <img src={imgSrc} alt={`Panel - ${title}`} />
             </div>
           </>
         )}
         {reverse && (
           <>
-            <div className="image-content">
+            <div className="image-content fade-in">
               <img src={imgSrc} alt={`Panel - ${title}`} />
             </div>
             <div className="text-content fade-in">

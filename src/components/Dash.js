@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 const Dash = () => {
+
   return (
-    <div>Dash</div>
-  )
+    <p>hello world</p>
+  );
 }
 
-export default Dash
+export default Dash;

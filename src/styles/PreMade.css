@@ -1,0 +1,78 @@
+.premade-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .program-options,
+  .workout-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .program-button,
+  .workout-button {
+    background-color: #005fa3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .program-button.active,
+  .workout-button.active {
+    background-color: #004272;
+  }
+  
+  .program-button:hover,
+  .workout-button:hover {
+    background-color: #0088e9;
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: #333;
+  }
+  
+  h2 {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+   
+  .day-section {
+    margin-bottom: 20px;
+  }
+  
+  .day-title {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0;
+    color: #ddd;
+  }
+  
+  .exercise-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    color: #ddd;
+    table-layout: fixed;
+  }
+  
+  .exercise-table th,
+  .exercise-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .exercise-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+  }
